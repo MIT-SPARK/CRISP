@@ -1,0 +1,25 @@
+name: base
+channels:
+  - pytorch3d
+  - pytorch
+  - pyg
+  - open3d-admin
+  - bottler
+  - iopath
+  - conda-forge
+  - defaults
+  - nvidia
+dependencies:
+- cudatoolkit=11.6
+- numpy
+- pillow=9.1.1
+- pip=22.1.2
+- python=3.9.13
+- pytorch::pytorch=1.13.1=py3.9_cuda11.6_cudnn8.3.2_0
+- pytorch::torchvision=0.14.1=py39_cu116
+- scipy
+- ffmpeg
+- tqdm
+- lightning
+- pyg=2.1.0=py39_torch_1.13.0_cu116
+- pytorch3d=0.7.4=py39_cu116_pyt1131

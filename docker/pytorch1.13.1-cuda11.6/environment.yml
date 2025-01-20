@@ -1,0 +1,47 @@
+name: base
+channels:
+  - open3d-admin
+  - bottler
+  - iopath
+  - conda-forge
+  - defaults
+dependencies:
+  - open3d=0.14.1=py39_0
+  - tensorboard
+  - pytest
+  - trimesh
+  - pyopengl
+  - pyrender
+  - pyglet
+  - scikit-image
+  - scipy
+  - cvxpy
+  - matplotlib
+  - pinocchio
+  - pypng
+  - cmake
+  - pyarrow
+  - bokeh
+  - seaborn
+  - zarr
+  - pip=22.1.2
+  - pip:
+      - Jinja2
+      - cvxpylayers
+      - roma
+      - meshio
+      - transforms3d
+      - rosbags
+      - tbparse
+      - loguru
+      - setproctitle
+      - mmcv-full
+      - fairscale
+      - chardet
+      - einops
+      - numba
+      - git+https://github.com/jingnanshi/bullet3.git
+      - h5py
+      - cmapy
+      - configargparse
+      - opencv-python-headless
