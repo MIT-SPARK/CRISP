@@ -3,7 +3,10 @@ import numpy as np
 import torch.nn as nn
 import torch
 from functools import partial
-from pytorch3d import ops
+try:
+    from pytorch3d import ops
+except:
+    print("Missing pytorch3d. Some functions will not work.")
 
 from crisp.utils.visualization_utils import visualize_pcs_pyvista
 from crisp.utils.math import (

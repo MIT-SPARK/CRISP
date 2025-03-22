@@ -9,7 +9,7 @@ from torch.profiler import record_function
 try:
     from pytorch3d import ops
 except Exception:
-    print(f"Missing pytorch3d. Some functions will not work.")
+    print("Missing pytorch3d. Some functions will not work.")
 
 
 def masked_varul_mean(data, mask):

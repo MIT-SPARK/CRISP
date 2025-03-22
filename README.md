@@ -37,7 +37,7 @@ If you use this project in your research, pleace cite:
 ## Installing Dependencies
 We recommend using Mamba to manage your environment. Run the following command to create a new environment with the required dependencies:
 ```bash
-mamba env create -f environment.yml
+mamba env create -f env.yml
 ```
 
 In addition, you need to compile and install PyTorch3D and xformers from source.
@@ -52,7 +52,8 @@ In addition, you may need to set `FORCE_CUDA=1`.
 
 For xformers, clone it locally and compile:
 ```bash 
-MAX_JOBS=N CUDA_HOME=/PATH_TO_CONDA_VIRTUAL_ENV python -m pip install -v git+https://github.com/facebookresearch/xformers.git@v0.0.23.post1#egg=xformers ```
+MAX_JOBS=N CUDA_HOME=/PATH_TO_CONDA_VIRTUAL_ENV python -m pip install -v git+https://github.com/facebookresearch/xformers.git@v0.0.23.post1#egg=xformers
+```
 where you can set N to be the maximum number of workers used for ninja to compile files.
 Note that the compilation of xformers may take a long time.
 

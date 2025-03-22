@@ -16,7 +16,7 @@ from crisp.utils.constants import IMAGENET_DEFAULT_MEAN, IMAGENET_DEFAULT_STD
 
 script_dir = pathlib.Path(__file__).parent.resolve().absolute()
 # MODIFY this to your checkpoint path
-ckpt_path = "CRISP/experiments/ycbv_supervised/model_ckpts/202403192306_AKNAN/checkpoint.pth"
+ckpt_path = script_dir.parent / "ycbv_supervised/model_ckpts/202403192306_AKNAN/checkpoint.pth"
 data_dir = script_dir / "data"
 rgb_dir = data_dir / "rgb"
 mask_dir = data_dir / "mask"

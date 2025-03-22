@@ -1,8 +1,12 @@
-import gtsam
 import time
 import numpy as np
 from scipy.spatial.transform import Rotation
 from crisp.utils.math import se3_inverse_numpy
+
+try:
+    import gtsam
+except:
+    print("Missing gtsam. ObjectPGOSolver will not work.")
 
 
 def are_equal_symbols(symbol_1, symbol_2):
