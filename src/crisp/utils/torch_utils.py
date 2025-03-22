@@ -1,6 +1,10 @@
-import pytorch3d
 import torch
-from pytorch3d.structures import join_meshes_as_batch
+
+try:
+    import pytorch3d
+    from pytorch3d.structures import join_meshes_as_batch
+except:
+    print("Missing pytorch3d. Some functions will not work.")
 
 
 def get_output_shape(model, image_dim):

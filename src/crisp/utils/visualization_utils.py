@@ -8,7 +8,6 @@ import pathlib
 
 import numpy as np
 import cv2
-import numpy as np
 import open3d as o3d
 import pyvista as pv
 import open3d.visualization.gui as gui
@@ -20,7 +19,6 @@ import trimesh.points
 import trimesh.creation
 from PIL import Image
 from matplotlib import pyplot as plt
-from torchvision.transforms import functional as F
 from torchvision.utils import draw_bounding_boxes, draw_segmentation_masks
 from tqdm import tqdm
 
@@ -1343,7 +1341,7 @@ def get_meshes_from_shape_codes(model, interp_shp_codes, mesh_recons_scale=0.251
     meshes = []
     # generate meshes for the shape codes
     for j in tqdm(range(interp_shp_codes.shape[0])):
-        shp_code = torch.tensor(interp_shp_codes[j, ...]).unsqueeze(0).float().cuda()
+        shp_code = interp_shp_codes[j, ...].clone().detach().unsqueeze(0).float().cuda()
 
         def model_fn(coords):
             return model.recons_net.forward(shape_code=shp_code, coords=coords)
